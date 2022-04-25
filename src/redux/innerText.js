@@ -1,14 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const textSlice = createSlice({
-    name:'innerText',
-    initialState:{text:''},
-    reducers:{
-        typefirst:(state,action)=>{
-             state.innerText += action.payload
-        }
-    }
-})
+  name: "innerText",
+  initialState: { firstname: "firstname", lastname:"lastname" },
+  reducers: {
+    typefirst: (state, action) => {
+      state.firstname = action.payload;
+    },
+    typesecond: (state, action) => {
+      state.lastname = action.payload;
+    },
+  },
+});
 
-export const {typefirst} = textSlice.actions
-export default textSlice.reducer
+export const { typefirst,typesecond } = textSlice.actions;
+export default textSlice.reducer;

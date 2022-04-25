@@ -7,15 +7,17 @@ import SeeText from "./components/SeeText";
 
 const App = () => {
   const counter = useSelector((store) => store.counter);
-  console.log(counter.data);
+  // console.log(counter.data);
   const dispatch = useDispatch();
   return (
     <div>
       <h1>{counter.data}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
-      <TypeInput/>
-      <SeeText/>
+      <hr />
+      <TypeInput />
+      <SeeText />
+      <hr/>
     </div>
   );
 };

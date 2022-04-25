@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { typefirst } from "../redux/innerText";
+import { typefirst, typesecond } from "../redux/innerText";
 
 const TypeInput = () => {
-  const [text, setText] = React.useState("");
   const dispatch = useDispatch();
+  console.log(dispatch);
   return (
     <div
       style={{
@@ -14,11 +14,13 @@ const TypeInput = () => {
       }}
     >
       <input
-        value={text}
         placeholder="firstname"
-        onChange={(e) => dispatch(typefirst(setText(e.target.value)))}
+        onChange={(e) => dispatch(typefirst(e.target.value))}
       />
-      <input placeholder="lastname" />
+      <input
+        placeholder="lastname"
+        onChange={(e) => dispatch(typesecond(e.target.value))}
+      />
     </div>
   );
 };
