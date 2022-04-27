@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./redux/Counter";
 import TypeInput from "./components/TypeInput";
 import SeeText from "./components/SeeText";
+import Todos from "./components/Todos";
 
 const App = () => {
   const counter = useSelector((store) => store.counter);
@@ -17,7 +18,8 @@ const App = () => {
       <hr />
       <TypeInput />
       <SeeText />
-      <hr/>
+      <hr />
+      <Todos />
     </div>
   );
 };

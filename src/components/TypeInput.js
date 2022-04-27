@@ -4,7 +4,6 @@ import { typefirst, typesecond } from "../redux/innerText";
 
 const TypeInput = () => {
   const dispatch = useDispatch();
-  console.log(dispatch);
   return (
     <div
       style={{
