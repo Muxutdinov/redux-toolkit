@@ -1,11 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  todo: [],
+};
+
 export const todoSlice = createSlice({
   name: "todoSlice",
-  initialState: { todo: [] },
+  initialState,
   reducers: {
     onAdd: (state, action) => {
-      state.todos.push(action.payload);
+      state.todo.push(action.payload);
     },
   },
 });
