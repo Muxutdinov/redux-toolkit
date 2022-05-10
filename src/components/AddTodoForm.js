@@ -7,17 +7,18 @@ import { v4 } from "uuid";
 const AddTodoForm = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.todos.todo);
-  console.log(data);
   const [todoValue, setTodoValue] = useState("");
 
   const handleAddTodo = () => {
-    const todo = {
-      id: v4(),
-      text: todoValue,
-      completed: false,
-    };
-    dispatch(onAdd(todo));
-    setTodoValue("");
+    if (todoValue.length > 0) {
+      const todo = {
+        id: v4(),
+        text: todoValue,
+        completed: false,
+      };
+      dispatch(onAdd(todo));
+      setTodoValue("");
+    }
   };
   return (
     <div style={{ marginLeft: "300px" }}>

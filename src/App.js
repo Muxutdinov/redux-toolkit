@@ -5,6 +5,7 @@ import { increment, decrement } from "./redux/Counter";
 import TypeInput from "./components/TypeInput";
 import SeeText from "./components/SeeText";
 import AddTodoForm from "./components/AddTodoForm";
+import Posts from "./components/Posts";
 
 const App = () => {
   const counter = useSelector((store) => store.counter);
@@ -19,6 +20,8 @@ const App = () => {
       <SeeText />
       <hr />
       <AddTodoForm />
+      <hr/>
+      <Posts/>
     </div>
   );
 };
